@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	port := flag.String("p", "8080", "porta")
-	directory := flag.String("d", ".", "pasta base")
+	port := flag.String("p", "8080", "port")
+	directory := flag.String("d", ".", "base folder")
 	flag.Parse()
 
 	http.Handle("/", http.FileServer(http.Dir(*directory)))
